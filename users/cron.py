@@ -7,6 +7,7 @@ from django.template import loader
 
 def send_daily_question():
     verified_profile_Objs = Profile.objects.filter(verified = True)
+    host_url = 'http://127.0.0.1:8000/''https://iamakkkhil.pythonanywhere.com/'
 
     for verified_profile_Obj in verified_profile_Objs:
         email = verified_profile_Obj.email
@@ -16,14 +17,14 @@ def send_daily_question():
             DayRecord.save()
         else:
             questionNo = DayRecord.currentDay 
-            snooze = 'http://127.0.0.1:8000/' + f'snooze/{verified_profile_Obj.id}'
+            snooze = host_url + f'snooze/{verified_profile_Obj.id}'
 
             if questionNo <=7: 
                 DayRecord.currentDay += 1
                 
                 question_obj = Question.objects.get(dayNo = questionNo)
 
-                report = 'http://127.0.0.1:8000/' + f'questions/report/{question_obj.dayNo}'
+                report = host_url + f'questions/report/{question_obj.dayNo}'
 
                 html_message = loader.render_to_string(
                 'questions/QuestionsTemplate.html', {'question_object': question_obj, 'snooze': snooze, 'report':report})
