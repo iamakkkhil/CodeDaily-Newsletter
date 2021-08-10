@@ -29,7 +29,7 @@
         
         {% if EmailSendPage %}
         <h1 style="font-family: 'Josefin Sans', sans-serif;font-weight: bold;text-align: center;">Check your Inbox !&nbsp;</h1>
-        <p style="font-family: 'Josefin Sans', sans-serif;text-align: center;font-size: 22px;">A mail has been sent to <strong>{{saved}}</strong>, go ahead and activate your account&nbsp;</p>
+        <p style="font-family: 'Josefin Sans', sans-serif;text-align: center;font-size: 22px;">A mail has been sent to <strong>{{saved|slice:"22"}}...</strong>, go ahead and activate your account. <br>Don't forget to check your <strong>spam folder.</strong>&nbsp;</p>
         
         {% elif AccountConfirmationPage %}
         <h1 style="font-family: 'Josefin Sans', sans-serif;font-weight: bold;text-align: center;">Account Activated :)&nbsp;</h1>
