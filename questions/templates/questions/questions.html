@@ -1,0 +1,25 @@
+<h1>Available Questions in Database</h1>
+<br>
+<h3><a href="{% url 'addQuestion' %}">Add Question</a></h3>
+<br>
+
+<table>
+    <tr>
+        <th>Day Number</th>
+        <th>Title</th>
+        <th>Difficulty Level</th>
+    </tr>
+
+    {% for object in question_objects %}
+    <tr>
+        <td>{{object.dayNo}}</td>
+        <td>{{object.title}}</td>
+        <td>{{object.difficulty}}</td>
+        <td><a href="{% url 'displayQuestion' object.id %}">View</a></td>
+        <td><a href="{% url 'updateQuestion' object.id %}">Edit</a></td>
+        <td><a href="{% url 'deleteQuestion' object.id %}">Delete</a></td>
+    </tr>
+    {% endfor %}
+</table>
+
+    

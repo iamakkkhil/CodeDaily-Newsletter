@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>RookeeCoders</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Andika+New+Basic:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="{% static 'css/Footer-Basic.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/Header-Blue.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.css">
+    <link rel="stylesheet" href="{% static 'assets/css/Navigation-Clean.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/Newsletter-Subscription-Form-1.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/Newsletter-Subscription-Form.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/styles.css' %}">
+</head>
+
+<body style="background: #e8f4ea;">
+    <nav class="navbar navbar-light navbar-expand-md" style="background: #ffffff;">
+        <div class="container-fluid"><a class="navbar-brand" href="/" style="background: url({% static 'img/rc.svg' %}) center / cover no-repeat;width: 200px;height: 50px;"></a></div>
+    </nav>
+    <section style="background: var(--white);margin: 25px;padding: 25px;margin-top: 25px;border-bottom-right-radius: 15px;border-bottom-left-radius: 15px;border-top-left-radius: 15px;border-top-right-radius: 15px;">
+        
+        {% if EmailSendPage %}
+        <h1 style="font-family: 'Josefin Sans', sans-serif;font-weight: bold;text-align: center;">Check your Inbox !&nbsp;</h1>
+        <p style="font-family: 'Josefin Sans', sans-serif;text-align: center;font-size: 22px;">A mail has been sent to <strong>{{saved}}</strong>, go ahead and activate your account&nbsp;</p>
+        
+        {% elif AccountConfirmationPage %}
+        <h1 style="font-family: 'Josefin Sans', sans-serif;font-weight: bold;text-align: center;">Account Activated :)&nbsp;</h1>
+        <p style="font-family: 'Josefin Sans', sans-serif;text-align: center;font-size: 22px;">We are glad to have you with us. You will start receiving RookeeCoders daily coding question mails from tomorrow.&nbsp;</p>
+        
+        {% elif PausedAccount %}
+        <h1 style="font-family: 'Josefin Sans', sans-serif;font-weight: bold;text-align: center;">Emails Snoozed :)&nbsp;</h1>
+        <p style="font-family: 'Josefin Sans', sans-serif;text-align: center;font-size: 22px;">Daily coding questions emails paused for: <strong>{{PausedAccount}}</strong>. <br>We hope to see you soon :) &nbsp;</p>
+        
+        {% elif ResumeQuestions %}
+        <h1 style="font-family: 'Josefin Sans', sans-serif;font-weight: bold;text-align: center;">Happy to see you again :)&nbsp;</h1>
+        <p style="font-family: 'Josefin Sans', sans-serif;text-align: center;font-size: 22px;">Your RookeeCoders daily coding question mails will be resume from tomorrow!&nbsp;</p>
+        
+        {% elif UnsubscribedAccount %}
+        <h1 style="font-family: 'Josefin Sans', sans-serif;font-weight: bold;text-align: center;">We'll miss you :(&nbsp;</h1>
+        <p style="font-family: 'Josefin Sans', sans-serif;text-align: center;font-size: 22px;">You are unsubscribed from RookeeCoders' daily coding question emails.&nbsp;</p>
+        
+        {% elif Reported %}
+        <h1 style="font-family: 'Josefin Sans', sans-serif;font-weight: bold;text-align: center;">Question #{{ Reported }} Reported&nbsp;</h1>
+        <p style="font-family: 'Josefin Sans', sans-serif;text-align: center;font-size: 22px;">Thanks for reporting, we'll have a look into it. &nbsp;</p>
+        
+        {% elif UserNotFound %}
+        <h1 style="font-family: 'Josefin Sans', sans-serif;font-weight: bold;text-align: center;">Invalid Url!&nbsp;</h1>
+        <p style="font-family: 'Josefin Sans', sans-serif;text-align: center;font-size: 22px;">The URL you are looking for doesn't exist, Try registering again!&nbsp;</p>
+        
+        {% elif SomethingWentWrong %}
+        <h1 style="font-family: 'Josefin Sans', sans-serif;font-weight: bold;text-align: center;">Something went wrong :(&nbsp;</h1>
+        <p style="font-family: 'Josefin Sans', sans-serif;text-align: center;font-size: 22px;">Link is broken, try contacting the owner at <strong>rookeecoders@gmail.com</strong>&nbsp;</p>
+        
+        {% elif error404 %}
+        <h1 style="font-family: 'Josefin Sans', sans-serif;font-weight: bold;text-align: center;">404 Page not found !&nbsp;</h1>
+        <p style="font-family: 'Josefin Sans', sans-serif;text-align: center;font-size: 22px;">This is not the webpage you are looking for :(!&nbsp;</p>
+        
+        {% elif error500 %}
+        <h1 style="font-family: 'Josefin Sans', sans-serif;font-weight: bold;text-align: center;">Error: 500 &nbsp;</h1>
+        <p style="font-family: 'Josefin Sans', sans-serif;text-align: center;font-size: 22px;">Internal server error, Sorry for thr inconvience!&nbsp;</p>
+        
+        {% elif error403 %}
+        <h1 style="font-family: 'Josefin Sans', sans-serif;font-weight: bold;text-align: center;">Error: 403&nbsp;</h1>
+        <p style="font-family: 'Josefin Sans', sans-serif;text-align: center;font-size: 22px;">Forbideen no permission :(&nbsp;</p>
+        
+        {% elif error400 %}
+        <h1 style="font-family: 'Josefin Sans', sans-serif;font-weight: bold;text-align: center;">Error: 400&nbsp;</h1>
+        <p style="font-family: 'Josefin Sans', sans-serif;text-align: center;font-size: 22px;"> Client sad bad request :(&nbsp;</p>
+        
+        {% endif %}
+        
+        <div style="text-align: center;"><button class="btn btn-primary" data-bss-hover-animate="pulse" type="button" onclick="location.href='/';" style="width: 45%;height: 45px;font-family: 'Josefin Sans', sans-serif;font-size: 20px;border-radius: 15px;background: var(--warning);font-weight: bold;border-width: 0px;border-color: var(--white);margin-top: 15px;margin-bottom: 7px;box-shadow: 0px 5px 1px #c49102;">Home</button></div>
+    </section>
+    <footer class="footer-basic" style="padding-top: 25px;padding-bottom: 10px;">
+        <div class="social" style="padding-bottom: 0px;"><a href="https://github.com/Rookee-Coders"><i class="icon ion-social-github" style="height: -6px;"></i></a><a href="https://www.instagram.com/rookeecoders/"><i class="fab fa-instagram"></i></a><a href="https://twitter.com/RookeeCoders"><i class="icon ion-social-twitter"></i></a><a href="https://www.facebook.com/RookeeCoders"><i class="icon ion-social-facebook"></i></a><a href="https://www.linkedin.com/company/rookeecoders/"><i class="icon ion-social-linkedin"></i></a><a href="https://discord.gg/f95uWpgpet"><i class="fab fa-discord"></i></a>
+            <p class="copyright">© 2021 Made with ❤ Rookee Coders<br></p>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'js/bs-init.js' %}"></script>
+    <script src="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.js"></script>
+</body>
+
+</html>

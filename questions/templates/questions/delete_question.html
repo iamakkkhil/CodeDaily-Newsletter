@@ -1,0 +1,6 @@
+<form method="POST" action="">
+    <h3>Are you sure you want to DELETE "{{ object }}" ?</h3>
+    {% csrf_token %}
+    <a href="{% url 'ReadQuestion' %}">Back</a>
+    <input type="submit" value="DELETE"></input>
+</form>

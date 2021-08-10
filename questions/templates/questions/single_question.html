@@ -1,0 +1,18 @@
+<h1>{{question_object.title}}</h1>
+<h3>Day #{{question_object.dayNo}}</h3>
+
+<br>
+<p>Difficulty Level: {{question_object.difficulty}}</p>
+<p>Tags: {{question_object.tag}}</p>
+<p>Companies: {{question_object.company}}</p>
+
+<p>{{question_object.description}}</p>
+
+{{ question_object.code|safe  }}
+
+<p>Time Complexity: {{question_object.time_cmplx}}</p>
+<p>Space Complexity: {{question_object.space_cmplx}}</p>
+
+<p><a href="{{question_object.source}}">Source</a></p>
+
+<br>

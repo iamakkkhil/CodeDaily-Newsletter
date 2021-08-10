@@ -1,0 +1,26 @@
+<h1>Add Question</h1>
+<br>
+
+<form method="post">
+{% csrf_token %}
+{% comment %} <p><input type="text", name="title", placeholder="Enter Title" required/></p>
+<p><input type="number", name="dayNo", placeholder="Enter Day Number" required/></p>
+<p><input type="text", name="difficulty", placeholder="Enter Difficulty Level" /></p>
+<p><input type="text", name="company", placeholder="Enter company" /></p>
+<p><input type="text", name="tag", placeholder="Enter Tags" /></p>
+<p><textarea name="description" placeholder="Enter Description" required/></textarea></p>
+<p><textarea name="code" placeholder="Enter Code"></textarea></p>
+<p><input type="text", name="time_cmplx", placeholder="Enter Time Complexity" /></p>
+<p><input type="text", name="space_cmplx", placeholder="Enter Space Complexity" /></p> {% endcomment %}
+
+{% for field in form %}
+<div>
+    <label>{{ field.label }}</label>
+    {{ field }}
+    {% comment %} <input class="input input--text" id="formInput#text" type="text" name="text"
+        placeholder="Enter text" /> {% endcomment %}
+</div>
+{% endfor %}
+
+<p><input type="submit", value="Submit Question"/></p>
+</form>

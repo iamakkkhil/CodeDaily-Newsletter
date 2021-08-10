@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>RookeeCoders</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Andika+New+Basic:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="{% static 'css/Footer-Basic.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/Header-Blue.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.css">
+    <link rel="stylesheet" href="{% static 'assets/css/Navigation-Clean.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/Newsletter-Subscription-Form-1.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/Newsletter-Subscription-Form.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/styles.css' %}">
+</head>
+
+<body style="background: #e8f4ea;">
+    <nav class="navbar navbar-light navbar-expand-md" style="background: #ffffff;border-bottom-color: rgb(4,10,16);">
+        <div class="container-fluid"><a class="navbar-brand" href="/" style="background: url({% static 'img/rc.svg' %}) center / cover no-repeat;width: 200px;height: 50px;"></a></div>
+    </nav>
+    <form method="post">
+    {% csrf_token %}
+    <section style="padding-bottom: 6.5rem;margin: 25px;background: #ffffff;margin-bottom: 0px;border-radius: 15px;">
+        <div style="text-align: center;">
+            <h1 style="font-family: 'Josefin Sans', sans-serif;margin-right: 5%;margin-left: 5%;padding-top: 30px;border-radius: 15px;font-weight: bold;line-height: 45px;letter-spacing: -1;">Remember we are just a click away from you :)</h1>
+        </div>
+        <div style="text-align: center;"><button class="btn btn-primary" data-bss-hover-animate="pulse" type="submit" name="action" value="1 Day" style="width: 45%;height: 45px;font-family: 'Josefin Sans', sans-serif;font-size: 20px;border-radius: 15px;background: var(--warning);font-weight: bold;border-width: 0px;border-color: var(--white);margin-top: 15px;margin-bottom: 7px;box-shadow: 0px 5px 1px #c49102;">1 Day</button></div>
+        <div style="text-align: center;"><button class="btn btn-primary" data-bss-hover-animate="pulse" type="submit" name="action" value="1 Week" style="width: 45%;height: 45px;font-family: 'Josefin Sans', sans-serif;font-size: 20px;border-radius: 15px;background: var(--warning);font-weight: bold;border-width: 0px;border-color: var(--white);margin-top: 15px;margin-bottom: 7px;box-shadow: 0px 5px 1px #c49102;">1 Week</button></div>
+        <div style="text-align: center;"><button class="btn btn-primary" data-bss-hover-animate="pulse" type="submit" name="action" value="1 Month" style="width: 45%;height: 45px;font-family: 'Josefin Sans', sans-serif;font-size: 20px;border-radius: 15px;background: var(--warning);font-weight: bold;border-width: 0px;border-color: var(--white);margin-top: 15px;margin-bottom: 7px;box-shadow: 0px 5px 1px #c49102;">1 Month</button></div>
+        <div style="text-align: center;"><button class="btn btn-primary" data-bss-hover-animate="pulse" type="submit" name="action" value="3 Months" style="width: 45%;height: 45px;font-family: 'Josefin Sans', sans-serif;font-size: 20px;border-radius: 15px;background: var(--warning);font-weight: bold;border-width: 0px;border-color: var(--white);margin-top: 15px;margin-bottom: 7px;box-shadow: 0px 5px 1px #c49102;">3 Months</button></div>
+        <div style="text-align: center;padding-bottom: 20px;"><button class="btn btn-primary" data-bss-hover-animate="pulse" type="submit" name="action" value="unsubscribe" style="width: 45%;height: 45px;font-family: 'Josefin Sans', sans-serif;font-size: 20px;border-radius: 15px;background: var(--danger);font-weight: bold;border-width: 0px;border-color: var(--white);margin-top: 15px;margin-bottom: 7px;box-shadow: 0px 5px 1px #610000;">Unsubscribe</button></div>
+    </section>
+    </form>
+    <footer class="footer-basic" style="padding-top: 25px;padding-bottom: 10px;">
+        <div class="social" style="padding-bottom: 0px;"><a href="https://github.com/Rookee-Coders"><i class="icon ion-social-github" style="height: -6px;"></i></a><a href="https://www.instagram.com/rookeecoders/"><i class="fab fa-instagram"></i></a><a href="https://twitter.com/RookeeCoders"><i class="icon ion-social-twitter"></i></a><a href="https://www.facebook.com/RookeeCoders"><i class="icon ion-social-facebook"></i></a><a href="https://www.linkedin.com/company/rookeecoders/"><i class="icon ion-social-linkedin"></i></a><a href="https://discord.gg/f95uWpgpet"><i class="fab fa-discord"></i></a>
+            <p class="copyright">© 2021 Made with ❤ Rookee Coders<br></p>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'js/bs-init.js' %}"></script>
+    <script src="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  {% load static %}
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>RookeeCoders</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Andika+New+Basic:400,700"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"
+    />
+    <link rel="stylesheet" href="{% static 'css/Footer-Basic.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/Header-Blue.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.css"
+    />
+    <link rel="stylesheet" href="{% static 'css/Navigation-Clean.css' %}"/>
+    <link
+      rel="stylesheet"
+      href="{% static 'css/Newsletter-Subscription-Form-1.css' %}"
+    />
+    <link rel="stylesheet" href="{% static 'css/Newsletter-Subscription-Form.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+  </head>
+
+  <body style="background: #e8f4ea; padding: -16px">
+    <section>
+      <nav
+        class="navbar navbar-light navbar-expand-md"
+        style="background: #ffffff; border-bottom-color: rgb(4, 10, 16)"
+      >
+        <div class="container-fluid">
+          <a
+            class="navbar-brand"
+            href="/"
+            style="
+              background: url({% static 'img/rc.svg' %}) center / cover no-repeat;
+              width: 200px;
+              height: 50px;
+            "
+          ></a>
+        </div>
+      </nav>
+      <section
+        class="newsletter-subscribe"
+        style="
+          border-top-left-radius: 15px;
+          border-top-right-radius: 15px;
+          padding-top: 35px;
+        "
+      >
+        <div class="container">
+          <h2
+            class="text-center"
+            style="
+              font-family: 'Josefin Sans', sans-serif;
+              color: var(--white);
+              font-size: 42px;
+              letter-spacing: -1px;
+              line-height: 45px;
+            "
+          >
+            <strong>Want to step up your coding game ?</strong><br />
+          </h2>
+          <p
+            class="text-center"
+            style="
+              font-size: 23px;
+              font-family: 'Josefin Sans', sans-serif;
+              color: var(--white);
+              padding-bottom: 20px;
+              line-height: 28px;
+            "
+          >
+            Become an enviable <strong>"PRO"</strong>grammer by practising just one problem
+            daily.<br />
+          </p>
+          <section style="width: 100%">
+            <form method="post" action="">
+            {% csrf_token %}
+            <div style="text-align: center; width: 100%">
+              <input
+                class="form-control-lg"
+                type="email"
+                name="email"
+                placeholder="Enter email..."
+                style="
+                  border-radius: 15px;
+                  height: 52px;
+                  margin-right: 0px;
+                  padding-right: 32px;
+                  text-align: center;
+                  font-family: 'Josefin Sans', sans-serif;
+                  border-style: none;
+                  border-bottom-right-radius: 0px;
+                  border-bottom-left-radius: 0px;
+                  padding-left: 32px;
+                  padding-top: 16px;
+                  padding-bottom: 18px;
+                  width: 75%;
+                "
+                required
+              />
+            </div>
+            <div style="text-align: center; width: 100%">
+              <button
+                class="btn btn-primary"
+                type="submit"
+                style="
+                  width: 75%;
+                  height: 45px;
+                  font-family: 'Josefin Sans', sans-serif;
+                  font-size: 20px;
+                  border-radius: 15px;
+                  background: var(--warning);
+                  font-weight: bold;
+                  border-width: 0px;
+                  border-color: var(--white);
+                  margin-top: 0;
+                  box-shadow: 0px 5px 1px #c49102;
+                  border-top-left-radius: 0px;
+                  border-top-right-radius: 0px;
+                  padding-bottom: 18px;
+                "
+              >
+                JOIN
+              </button>
+            </div>
+            </form>
+            
+          </section>
+        </div>
+      </section>
+    </section>
+    <section style="padding-bottom: 6.5rem">
+      <div>
+        <section
+          style="
+            background: var(--white);
+            margin: 25px;
+            padding: 25px;
+            margin-top: 0px;
+            border-bottom-right-radius: 15px;
+            border-bottom-left-radius: 15px;
+          "
+        >
+          <h1
+            style="
+              text-align: center;
+              font-family: 'Josefin Sans', sans-serif;
+              margin-top: 25px;
+              font-size: 42px;
+            "
+          >
+            How it works
+          </h1>
+          <h1
+            style="
+              text-align: left;
+              font-family: 'Josefin Sans', sans-serif;
+              padding-top: 25px;
+              margin-left: 25px;
+              font-size: 30px;
+              margin-right: 25px;
+            "
+          >
+            1. We Give You Problems:
+          </h1>
+          <p
+            style="
+              margin-left: 50px;
+              font-size: 20px;
+              margin-right: 50px;
+              font-family: 'Andika New Basic', sans-serif;
+            "
+          >
+            We carefully pick out popular coding problems that will challenge
+            your coding skills.<br />
+          </p>
+          <h1
+            style="
+              text-align: left;
+              font-family: 'Josefin Sans', sans-serif;
+              padding-top: 25px;
+              margin-left: 25px;
+              font-size: 30px;
+              margin-right: 25px;
+            "
+          >
+            2. You Solve Them:<br />
+          </h1>
+          <p
+            style="
+              margin-left: 50px;
+              font-size: 20px;
+              margin-right: 50px;
+              font-family: 'Andika New Basic', sans-serif;
+            "
+          >
+            Solve one problem daily, which we'll send you via email.<br />
+          </p>
+          <h1
+            style="
+              text-align: left;
+              font-family: 'Josefin Sans', sans-serif;
+              padding-top: 25px;
+              margin-left: 25px;
+              font-size: 30px;
+              margin-right: 25px;
+            "
+          >
+            3. Make It a Habit:
+          </h1>
+          <p style="margin-left: 50px; font-size: 20px; margin-right: 50px">
+            Only practice will help you to improve and get better. This will not
+            only help you with your logical skills but also prepare you for your
+            future coding rounds/competitions.<br />
+          </p>
+        </section>
+      </div>
+    </section>
+    <footer
+      class="footer-basic"
+      style="padding-top: 25px; padding-bottom: 25px"
+    >
+      <div class="social" style="padding-bottom: 0px">
+        <a href="https://github.com/Rookee-Coders"
+          ><i class="icon ion-social-github" style="height: -6px"></i></a
+        ><a href="https://www.instagram.com/rookeecoders/"
+          ><i class="fab fa-instagram"></i></a
+        ><a href="https://twitter.com/RookeeCoders"
+          ><i class="icon ion-social-twitter"></i></a
+        ><a href="https://www.facebook.com/RookeeCoders"
+          ><i class="icon ion-social-facebook"></i></a
+        ><a href="https://www.linkedin.com/company/rookeecoders/"
+          ><i class="icon ion-social-linkedin"></i></a
+        ><a href="https://discord.gg/f95uWpgpet"
+          ><i class="fab fa-discord"></i
+        ></a>
+      </div>
+      <p class="copyright">© 2021 Made with ❤ Rookee Coders<br /></p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'js/bs-init.js' %}"></script>
+    <script src="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.js"></script>
+  </body>
+</html>
