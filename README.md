@@ -7,8 +7,11 @@ This website uses frontend provided by HTML, CSS and Bootstrap and backed with D
 <p align="left">
   <img src="https://img.shields.io/badge/django-092E20.svg?&style=for-the-badge&logo=django&logoColor=white" />&nbsp;&nbsp;&nbsp;
   <img src="https://img.shields.io/badge/python-FFD43B.svg?&style=for-the-badge&logo=python&logoColor=white" />&nbsp;&nbsp;&nbsp;
+  <img src="https://img.shields.io/badge/jinja-FFFFFF.svg?&style=for-the-badge&logo=jinja&logoColor=black" />&nbsp;&nbsp;&nbsp;
   <img src="https://img.shields.io/badge/bootstrap-563d7c.svg?&style=for-the-badge&logo=bootstrap&logoColor=white" />&nbsp;&nbsp;&nbsp;
   <img src="https://img.shields.io/badge/Sqlite-20639B.svg?&style=for-the-badge&logo=sqlite&logoColor=white" />&nbsp;&nbsp;&nbsp;
+ <img src="https://img.shields.io/badge/gmail-D14836.svg?&style=for-the-badge&logo=gmail&logoColor=white" />&nbsp;&nbsp;&nbsp;
+
 </p>
 
 ### Website - https://iamakkkhil.pythonanywhere.com/
